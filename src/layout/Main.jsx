@@ -4,7 +4,7 @@ import Footer from "../components/sharecomponents/Footer";
 
 const Main = () => {
     return (
-        <div>
+        <div className="max-w-[1440px]">
             <Navbar />
             <Outlet />
             <Footer />
