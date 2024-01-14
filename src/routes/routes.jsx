@@ -12,6 +12,8 @@ import Dashboard from "../page/Dashboard/Dashboard";
 import Users from "../page/Dashboard/Alluser/Alluser";
 import UpdateFrom from "../Dashboard_Component/Productcard.jsx/Updateproductform";
 import Myproduct from "../page/Dashboard/MyProduct/Myproduct";
+import PaymentForm from "../page/Payment/Paymentform";
+import Paymentsuccess from "../page/Payment/Paymentsuccess";
 
 export const routes = createBrowserRouter([
     {
@@ -26,7 +28,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/cart',
                 element: <Privateroute><MyCart /></Privateroute>
-            }
+            }, {
+                path: "/payment",
+                element: <Privateroute><PaymentForm /></Privateroute>
+            },
         ]
     },
     {
@@ -41,6 +46,14 @@ export const routes = createBrowserRouter([
     {
         path: 'forget_password',
         element: <Forgetpassword />
+    },
+    {
+        path: '/payment/success/:trnId',
+        element: <Paymentsuccess />
+    },
+    {
+        path: '/payment/failed',
+        element: <div>failed </div>
     },
     {
         path: '/dashboard',
