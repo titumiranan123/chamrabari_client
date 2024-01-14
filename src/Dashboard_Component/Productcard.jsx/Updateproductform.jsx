@@ -36,7 +36,7 @@ const UpdateFrom = () => {
             image_url: based64,
             price: data.price,
         }
-        fetch(`https://chamrabari-backend-qz4xu1bgc-titumiranan123.vercel.app/products/${item._id}`, {
+        fetch(`https://chamrabari-backend.vercel.app/${item._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const UpdateFrom = () => {
                 return response.json();
             })
             .then(parsedResponse => {
-
+                console.log(parsedResponse)
                 if (parsedResponse.message === 'Product Update') {
                     Swal.fire(
                         'Update Success!',

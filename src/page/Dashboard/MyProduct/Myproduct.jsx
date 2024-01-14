@@ -15,7 +15,7 @@ const Myproduct = () => {
             image_url: based64,
             price: data.price,
         }
-        fetch('https://chamrabari-backend-qz4xu1bgc-titumiranan123.vercel.app/products', {
+        fetch('https://chamrabari-backend.vercel.app/products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-
 import { useState } from 'react';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
@@ -34,13 +33,12 @@ const ProductCard = ({ item }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-
-                fetch(`https://chamrabari-backend-qz4xu1bgc-titumiranan123.vercel.app/products/${id}`, {
+                fetch(`https://chamrabari-backend.vercel.app/products/${id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
                     .then(data => {
-
+                        console.log(data)
                         if (data.message === "deleted") {
                             refetch();
                             Swal.fire(
@@ -52,10 +50,7 @@ const ProductCard = ({ item }) => {
                     })
             }
         });
-
     };
-
-
     return (
         <div className=''>
             <div className='grid grid-cols-4 gap-10'>
@@ -84,7 +79,10 @@ const ProductCard = ({ item }) => {
                     </div>
                 </div>
                 <div className='flex gap-5'>
+                    {/* You can open the modal using document.getElementById('ID').showModal() method */}
+
                     <Link to={`/dashboard/products/${item._id}`}><button className="btn border border-[#C94428]" >Edit Product</button></Link>
+
                     <button onClick={() => removeProduct(item._id)} className="btn py-4 px-8 bg-[#C94428] hover:bg-red-500 rounded-xl font-bold">Remove</button>
                 </div>
             </div>

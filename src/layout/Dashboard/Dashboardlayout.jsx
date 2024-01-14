@@ -1,19 +1,24 @@
 import { Outlet } from "react-router-dom";
-
-
+import dashboard from '../../assets/icon/Dashbord.svg'
+import home from '../../assets/icon/home.svg'
+import product from '../../assets/icon/product.svg'
+import user from '../../assets/icon/user.svg'
+import singin from '../../assets/icon/singin.svg'
+import singup from '../../assets/icon/singup.svg'
+import help from '../../assets/icon/help.svg'
 import logo from '../../assets/Chamrabari_Logo.png'
 import SearchInput from "../../Dashboard_Component/SearchInput/Searchinput";
 const navItem = <div className=' bg-opacity-60 h-screen'>
     <ul className="space-y-2 font-medium border-b-2 border-[#C94428] py-4">
         <li>
             <a href="/dashboard" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#C94428] hover:text-white dark:hover:bg-gray-700 group">
-                {/* <img src={dashbord} alt='' className='h-6 w-6' /> */}
+                <img src={dashboard} alt='' className='h-6 w-6' />
                 <span className="ms-3">Dashboard</span>
             </a>
         </li>
         <li>
             <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#C94428] hover:text-white dark:hover:bg-gray-700 group">
-                {/* <img src={home} alt='' className='h-6 w-6 ' /> */}
+                <img src={home} alt='' className='h-6 w-6 ' />
                 <span className="flex-1 ms-3 whitespace-nowrap">Home</span>
             </a>
         </li>
@@ -27,13 +32,13 @@ const navItem = <div className=' bg-opacity-60 h-screen'>
 
         <li>
             <a href="/dashboard/products" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#C94428] hover:text-white dark:hover:bg-gray-700 group">
-                {/* <img src={product} alt='' className='h-6 w-6' /> */}
+                <img src={product} alt='' className='h-6 w-6' />
                 <span className="flex-1 ms-3 whitespace-nowrap">Products</span>
             </a>
         </li>
         <li>
             <a href="/dashboard/users" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#C94428] hover:text-white dark:hover:bg-gray-700 group">
-                {/* <img src={user} alt='' className='h-6 w-6' /> */}
+                <img src={user} alt='' className='h-6 w-6' />
                 <span className="flex-1 ms-3 whitespace-nowrap">Users</span>
             </a>
         </li>
@@ -42,19 +47,19 @@ const navItem = <div className=' bg-opacity-60 h-screen'>
 
         <li>
             <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#C94428] hover:text-white dark:hover:bg-gray-700 group">
-                {/* <img src={singin} alt='' className='h-6 w-6' /> */}
+                <img src={singin} alt='' className='h-6 w-6' />
                 <span className="flex-1 ms-3 whitespace-nowrap">Sign In</span>
             </a>
         </li>
         <li>
             <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#C94428] hover:text-white dark:hover:bg-gray-700 group">
-                {/* <img src={singup} alt='' className='h-8=6 w-6' /> */}
+                <img src={singup} alt='' className='h-8=6 w-6' />
                 <span className="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
             </a>
         </li>
         <li>
             <a href="#" className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-[#C94428] hover:text-white dark:hover:bg-gray-700 dark:text-white group">
-                {/* <img src={help} alt='' className='h-8=6 w-6' /> */}
+                <img src={help} alt='' className='h-8=6 w-6' />
                 <span className="ms-3">Help</span>
             </a>
         </li>
