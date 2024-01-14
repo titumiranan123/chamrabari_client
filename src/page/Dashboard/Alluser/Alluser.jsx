@@ -6,7 +6,7 @@ const Users = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch('https://chamrabari-backend.vercel.app/user')
+        fetch('http://localhost:3001/user')
             .then(res => res.json())
             .then(data => setUsers(data))
             .catch(error => console.error(error));

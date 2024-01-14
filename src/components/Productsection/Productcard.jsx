@@ -9,7 +9,7 @@ const Productcard = () => {
     const { user } = useContext(Authcontext);
     const [, refetch] = useCart()
     useEffect(() => {
-        fetch('https://chamrabari-backend.vercel.app/products')
+        fetch('http://localhost:3001/products')
             .then(res => {
                 if (!res.ok) {
                     throw new Error('Network response was not ok');
@@ -50,7 +50,7 @@ const Productcard = () => {
                 price: product.price,
                 user_email: user?.email,
             }
-            fetch('https://chamrabari-backend.vercel.app/cart', {
+            fetch('http://localhost:3001/cart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

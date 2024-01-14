@@ -84,7 +84,6 @@ const Dashboardlayout = () => {
                     {navItem}
                 </div>
                 <div className='w-[80%] drawer-content border-2 border-dashed'>
-
                     <Outlet />
                 </div>
             </div>

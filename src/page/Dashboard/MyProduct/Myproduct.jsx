@@ -15,8 +15,10 @@ const Myproduct = () => {
             image_url: based64,
             price: data.price,
         }
-        fetch('https://chamrabari-backend.vercel.app/products', {
+        console.log(productData)
+        fetch('http://localhost:3001/products', {
             method: 'POST',
+
             headers: {
                 'Content-Type': 'application/json',
             },
